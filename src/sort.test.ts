@@ -19,16 +19,6 @@ test('Return Array', (assert) => {
     assert.end();
 });
 
-
-// Controleer of the array die we terugkrijgen dezelfde lengte heeft als de originele array
-test('Return Array of same length', (assert) => {
-    // Controleer de lengte van de array
-    assert.equal(testArray.length, sort(testArray).length, 'the result should have the same length as the input');
-
-    // Einde van de test
-    assert.end();
-});
-
 // Controleer of de test data niet wordt aangetast
 test('Keep orginal array intact', (assert) => {
     // Voer de functie uit
@@ -36,6 +26,15 @@ test('Keep orginal array intact', (assert) => {
 
     // Controleer of de test data niet is aangetast
     assert.isEquivalent(testArray, checkTestArray, 'the function should not alter the input');
+
+    // Einde van de test
+    assert.end();
+});
+
+// Controleer of the array die we terugkrijgen dezelfde lengte heeft als de originele array
+test('Return Array of same length', (assert) => {
+    // Controleer de lengte van de array
+    assert.equal(testArray.length, sort(testArray).length, 'the result should have the same length as the input');
 
     // Einde van de test
     assert.end();
@@ -88,7 +87,7 @@ test('Are the elements ordered?', (assert) => {
     // Ga over alle items in het resultaat
     for (let i = 0; i < result.length - 1; i++) {
         // Controleer of het item kleiner is dan het volgende item
-        const isSmaller = result[i] < result[i + 1];
+        const isSmaller = result[i] <= result[i + 1];
         
         // Als dit niet zo is, verander het resultaat van de test
         isOrdered = isSmaller ? isOrdered : false;
@@ -99,4 +98,4 @@ test('Are the elements ordered?', (assert) => {
 
     // Het einde van de test
     assert.end();
-})
+});

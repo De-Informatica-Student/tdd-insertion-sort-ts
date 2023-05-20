@@ -13,7 +13,7 @@ const checkTestArray = [...testArray];
 // Controleer of the functie een array teruggeeft als resultaat
 test('Return Array', (assert) => {
     // Bekijk of het antwoord een array is
-    assert.true(Array.isArray(testArray), 'the result of the function must be an array');
+    assert.true(Array.isArray(sort([])), 'the result of the function must be an array');
     
     // Einde van de test
     assert.end();

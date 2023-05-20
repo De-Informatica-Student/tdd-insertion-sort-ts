@@ -98,7 +98,7 @@ Daarna beëindigen we de test.
 
 ```ts
 test('Return Array', (assert) => {
-    assert.true(Array.isArray([]), 'the result of the function must be an array');
+    assert.true(Array.isArray(sort([])), 'the result of the function must be an array');
     assert.end();
 });
 ```
@@ -144,7 +144,7 @@ const testArray = [6, 4, 2, 3, 5, 1];
 const checkTestArray = [...testArray];
 
 test('Return Array', (assert) => {
-    assert.true(Array.isArray(testArray), 'the result of the function must be an array');
+    assert.true(Array.isArray(sort([])), 'the result of the function must be an array');
     assert.end();
 });
 
